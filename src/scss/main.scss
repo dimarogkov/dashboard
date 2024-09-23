@@ -53,6 +53,7 @@ html {
 .text {
     position: relative;
     font-size: 1rem;
+    font-weight: 500;
     color: var(--color-black);
 
     &--size-2 {
@@ -103,4 +104,392 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/*=============================*/
+/* SIDEBAR */
+/*=============================*/
+.sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: var(--sidebar-width);
+    height: var(--sidebar-height);
+    padding: 2.571rem 2rem;
+    box-shadow: 0 0.714rem 4.286rem rgba(226, 236, 249, 0.6);
+    background-color: var(--color-white);
+
+    @include tabletBig {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    @include tabletSmall {
+        padding: 0 1.429rem;
+    }
+
+    @include mobileBig {
+        padding: 0 1.143rem;
+    }
+
+    &--open-menu {
+        .sidebar__layer {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sidebar__list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+    }
+
+    &__layer {
+        position: fixed;
+        top: var(--sidebar-height);
+        left: 0;
+        width: 100%;
+        height: calc(100% - var(--sidebar-height));
+        background-color: rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    &__top {
+        position: relative;
+        width: 100%;
+
+        @include tabletBig {
+            width: auto;
+        }
+    }
+
+    &__logos {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        gap: 0.286rem;
+        width: 100%;
+        margin-bottom: 3.857rem;
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 0.75;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include tabletBig {
+            width: auto;
+            margin-bottom: 0;
+        }
+    }
+
+    &__logo {
+        position: relative;
+        width: 13.857rem;
+
+        @include tabletBig {
+            width: 11.429rem;
+        }
+
+        @include mobileBig {
+            width: 10.714rem;
+        }
+    }
+
+    &__version {
+        position: relative;
+        display: inline-block;
+        font-size: 0.714rem;
+        font-weight: 500;
+        color: var(--color-gray-2);
+        padding-bottom: 0.429rem;
+
+        @include tabletBig {
+            padding-bottom: 0.286rem;
+        }
+    }
+
+    &__list {
+        position: relative;
+        width: 100%;
+
+        @include tabletBig {
+            position: fixed;
+            top: var(--sidebar-height);
+            right: 0;
+            width: 28.571rem;
+            height: calc(100% - var(--sidebar-height));
+            padding: 1.429rem;
+            opacity: 0;
+            visibility: hidden;
+            background-color: var(--color-white);
+            box-shadow: 0 0.714rem 4.286rem rgba(226, 236, 249, 0.6);
+            transform: translateX(28.571rem);
+            transition: all 0.3s;
+        }
+
+        @include mobileBig {
+            width: 100%;
+            padding: 1.143rem;
+            transform: translateX(100%);
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        margin-bottom: 1.143rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        padding: 0.857rem 2.714rem 0.857rem 0.857rem;
+        border-radius: 0.571rem;
+
+        @include tabletSmall {
+            gap: 0.857rem;
+            padding: 0.714rem 2.429rem 0.714rem 0.714rem;
+        }
+
+        &--active {
+            background-color: var(--color-blue);
+            pointer-events: none;
+
+            .sidebar__text,
+            .sidebar__arrow {
+                color: var(--color-white);
+            }
+
+            .sidebar__icon {
+                .fill {
+                    fill: var(--color-white);
+                }
+
+                .stroke {
+                    stroke: var(--color-white);
+                }
+            }
+        }
+
+        &:hover {
+            .sidebar__text,
+            .sidebar__arrow {
+                color: var(--color-blue);
+            }
+
+            .sidebar__icon {
+                .fill {
+                    fill: var(--color-blue);
+                }
+
+                .stroke {
+                    stroke: var(--color-blue);
+                }
+            }
+        }
+    }
+
+    &__icons {
+        position: relative;
+        display: flex;
+        width: 1.714rem;
+        min-width: 1.714rem;
+    }
+
+    &__icon {
+        position: relative;
+        width: 100%;
+
+        .fill {
+            fill: var(--color-gray);
+            transition: all 0.3s;
+        }
+
+        .stroke {
+            stroke: var(--color-gray);
+            transition: all 0.3s;
+        }
+    }
+
+    &__text {
+        position: relative;
+        width: 100%;
+        color: var(--color-gray);
+        transition: all 0.3s;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 0.714rem;
+        color: var(--color-gray);
+    }
+
+    &__navigation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 2.857rem;
+
+        @include mobileBig {
+            gap: 1.429rem;
+        }
+    }
+
+    &__burger {
+        position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 1.714rem;
+        height: 1.143rem;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            width: 100%;
+            height: 0.143rem;
+            background-color: var(--color-black);
+            transition: all 0.3s;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        @include tabletBig {
+            display: flex;
+        }
+
+        &--active {
+            &::before {
+                top: 0.5rem;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: 0.5rem;
+                transform: rotate(-45deg);
+            }
+
+            span {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(0.714rem);
+            }
+        }
+
+        span {
+            position: relative;
+            width: 100%;
+            height: 0.143rem;
+            background-color: var(--color-black);
+            transition: all 0.3s;
+        }
+    }
+}
+
+/*=============================*/
+/* USER */
+/*=============================*/
+.user {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.857rem;
+
+    @include tabletBig {
+        width: auto;
+    }
+
+    &__imgs {
+        position: relative;
+        width: 3rem;
+        min-width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--color-gray-3);
+        overflow: hidden;
+
+        &:hover {
+            .user__img {
+                filter: brightness(0.9);
+                transform: scale(1.05);
+            }
+        }
+
+        @include tabletBig {
+            width: 2.714rem;
+            min-width: 2.714rem;
+            height: 2.714rem;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        will-change: transform;
+        transition: all 0.5s;
+    }
+
+    &__cont {
+        position: relative;
+        width: 100%;
+
+        @include mobileBig {
+            display: none;
+        }
+    }
+
+    &__name {
+        position: relative;
+        width: 100%;
+        letter-spacing: 0.01em;
+        line-height: 1.1em;
+
+        a {
+            transition: all 0.3s;
+
+            &:hover {
+                color: var(--color-blue);
+            }
+        }
+    }
+
+    &__position {
+        font-weight: 400;
+        line-height: 1.1em;
+        color: var(--color-gray-2);
+    }
 }

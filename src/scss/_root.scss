@@ -3,10 +3,20 @@
 /*=============================*/
 :root {
     --font: 'Poppins', sans-serif;
-    --sidebar-width: 306px;
+    --sidebar-width: 21.857rem;
 
     --color-white: #fff;
-    --color-black: #2d3436;
+    --color-bg: #fafbff;
+    --color-gray: #9197b3;
+    --color-gray-2: #757575;
+    --color-gray-3: #b5b7c0;
+    --color-black: #000;
+    --color-green: #00b087;
+    --color-green-bg: rgba(22, 192, 152, 38);
+    --color-red: #df0404;
+    --color-red-bg: #ffc5c5;
+    --color-blue: #5932ea;
+    --color-pagination-bg: #f5f5f5;
 }
 /*media*/
 @media (max-width: 1199px) {

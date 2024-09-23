@@ -8,20 +8,19 @@
 /* GLOBAL SETTINGS */
 /*=============================*/
 html {
-    height: 100%;
-}
-
-.body {
     font-family: var(--font);
-    height: 100%;
+    font-size: 0.972vw;
+    background-color: var(--color-bg);
 
-    &--lock {
-        overflow: hidden;
+    @include tabletBig {
+        font-size: 14px;
     }
 }
 
-.main {
-    flex: 1;
+.body {
+    &--lock {
+        overflow: hidden;
+    }
 }
 
 .section {
@@ -30,12 +29,8 @@ html {
 }
 
 .container {
-    max-width: 1340px;
-    padding: 0 15px;
-
-    @include tabletBig {
-        max-width: 1000px;
-    }
+    max-width: 71.429rem;
+    padding: 0 1.143rem;
 }
 
 /*=============================*/
@@ -47,21 +42,21 @@ html {
     color: var(--color-black);
 
     &--h1 {
-        font-size: 24px;
+        font-size: 1.714rem;
     }
 
     &--h2 {
-        font-size: 22px;
+        font-size: 1.571rem;
     }
 }
 
 .text {
     position: relative;
-    font-size: 14px;
+    font-size: 1rem;
     color: var(--color-black);
 
     &--size-2 {
-        font-size: 12px;
+        font-size: 0.857rem;
     }
 }
 

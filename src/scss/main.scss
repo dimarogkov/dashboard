@@ -1,0 +1,111 @@
+@import 'fonts';
+@import 'media';
+@import 'root';
+@import 'reset';
+@import 'loader';
+
+/*=============================*/
+/* GLOBAL SETTINGS */
+/*=============================*/
+html {
+    height: 100%;
+}
+
+.body {
+    font-family: var(--font);
+    height: 100%;
+
+    &--lock {
+        overflow: hidden;
+    }
+}
+
+.main {
+    flex: 1;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    max-width: 1340px;
+    padding: 0 15px;
+
+    @include tabletBig {
+        max-width: 1000px;
+    }
+}
+
+/*=============================*/
+/* TYPOGRAPHY */
+/*=============================*/
+.title {
+    position: relative;
+    line-height: 1.3em;
+    color: var(--color-black);
+
+    &--h1 {
+        font-size: 24px;
+    }
+
+    &--h2 {
+        font-size: 22px;
+    }
+}
+
+.text {
+    position: relative;
+    font-size: 14px;
+    color: var(--color-black);
+
+    &--size-2 {
+        font-size: 12px;
+    }
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+    transition: all 0.3s;
+
+    &:link,
+    &:visited,
+    &:active,
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+iframe {
+    border: none;
+    outline: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,16 @@
+/*=============================*/
+/* ROOT */
+/*=============================*/
+:root {
+    --font: 'Poppins', sans-serif;
+    --sidebar-width: 306px;
+
+    --color-white: #fff;
+    --color-black: #2d3436;
+}
+/*media*/
+@media (max-width: 1199px) {
+    :root {
+        --sidebar-width: 200px;
+    }
+}

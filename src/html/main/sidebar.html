@@ -1,94 +1,164 @@
 <div class="sidebar">
     <div class="sidebar__layer"></div>
 
-    <div class="sidebar__top">
-        <a href="index.html" class="sidebar__logos">
-            <img
-                src="img/logo.svg"
-                alt="logo"
-                loading="lazy"
-                class="sidebar__logo"
-            />
-            <span class="sidebar__version">v.01</span>
-        </a>
+    <div class="sidebar__block">
+        <div class="sidebar__top">
+            <a href="index.html" class="sidebar__logos">
+                <img
+                    src="img/logo.svg"
+                    alt="logo"
+                    loading="lazy"
+                    class="sidebar__logo"
+                />
+                <span class="sidebar__version">v.01</span>
+            </a>
 
-        <ul class="sidebar__list">
-            <li class="sidebar__item">
-                <a href="index.html" class="sidebar__link">
-                    <div class="sidebar__icons">
-                        @@include('../icons/dashboard.html')
-                    </div>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <div class="sidebar__icons">
+                            @@include('../icons/dashboard.html')
+                        </div>
 
-                    <p class="text sidebar__text">Dashboard</p>
-                    <span class="las la-angle-right sidebar__arrow"></span>
-                </a>
-            </li>
+                        <p class="text sidebar__text">Dashboard</p>
+                        <span class="las la-angle-right sidebar__arrow"></span>
+                    </a>
+                </li>
 
-            <li class="sidebar__item">
-                <a href="index.html" class="sidebar__link">
-                    <div class="sidebar__icons">
-                        @@include('../icons/product.html')
-                    </div>
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <div class="sidebar__icons">
+                            @@include('../icons/product.html')
+                        </div>
 
-                    <p class="text sidebar__text">Product</p>
-                    <span class="las la-angle-right sidebar__arrow"></span>
-                </a>
-            </li>
+                        <p class="text sidebar__text">Product</p>
+                        <span class="las la-angle-right sidebar__arrow"></span>
+                    </a>
+                </li>
 
-            <li class="sidebar__item">
-                <a
-                    href="index.html"
-                    class="sidebar__link sidebar__link--active"
-                >
-                    <div class="sidebar__icons">
-                        @@include('../icons/customers.html')
-                    </div>
+                <li class="sidebar__item">
+                    <a
+                        href="index.html"
+                        class="sidebar__link sidebar__link--active"
+                    >
+                        <div class="sidebar__icons">
+                            @@include('../icons/customers.html')
+                        </div>
 
-                    <p class="text sidebar__text">Customers</p>
-                    <span class="las la-angle-right sidebar__arrow"></span>
-                </a>
-            </li>
+                        <p class="text sidebar__text">Customers</p>
+                        <span class="las la-angle-right sidebar__arrow"></span>
+                    </a>
+                </li>
 
-            <li class="sidebar__item">
-                <a href="index.html" class="sidebar__link">
-                    <div class="sidebar__icons">
-                        @@include('../icons/income.html')
-                    </div>
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <div class="sidebar__icons">
+                            @@include('../icons/income.html')
+                        </div>
 
-                    <p class="text sidebar__text">Income</p>
-                    <span class="las la-angle-right sidebar__arrow"></span>
-                </a>
-            </li>
+                        <p class="text sidebar__text">Income</p>
+                        <span class="las la-angle-right sidebar__arrow"></span>
+                    </a>
+                </li>
 
-            <li class="sidebar__item">
-                <a href="index.html" class="sidebar__link">
-                    <div class="sidebar__icons">
-                        @@include('../icons/promote.html')
-                    </div>
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <div class="sidebar__icons">
+                            @@include('../icons/promote.html')
+                        </div>
 
-                    <p class="text sidebar__text">Promote</p>
-                    <span class="las la-angle-right sidebar__arrow"></span>
-                </a>
-            </li>
+                        <p class="text sidebar__text">Promote</p>
+                        <span class="las la-angle-right sidebar__arrow"></span>
+                    </a>
+                </li>
 
-            <li class="sidebar__item">
-                <a href="index.html" class="sidebar__link">
-                    <div class="sidebar__icons">
-                        @@include('../icons/help.html')
-                    </div>
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <div class="sidebar__icons">
+                            @@include('../icons/help.html')
+                        </div>
 
-                    <p class="text sidebar__text">Help</p>
-                    <span class="las la-angle-right sidebar__arrow"></span>
-                </a>
-            </li>
-        </ul>
-    </div>
+                        <p class="text sidebar__text">Help</p>
+                        <span class="las la-angle-right sidebar__arrow"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-    <div class="sidebar__navigation">
-        @@include('../other/user.html')
+        <div class="sidebar__navigation">
+            @@include('../other/user.html')
 
-        <div class="sidebar__burger">
-            <span></span>
+            <div class="sidebar__burger">
+                <span></span>
+            </div>
         </div>
     </div>
+
+    <ul class="sidebar__menu">
+        <li class="sidebar__item">
+            <a href="index.html" class="sidebar__link">
+                <div class="sidebar__icons">
+                    @@include('../icons/dashboard.html')
+                </div>
+
+                <p class="text sidebar__text">Dashboard</p>
+                <span class="las la-angle-right sidebar__arrow"></span>
+            </a>
+        </li>
+
+        <li class="sidebar__item">
+            <a href="index.html" class="sidebar__link">
+                <div class="sidebar__icons">
+                    @@include('../icons/product.html')
+                </div>
+
+                <p class="text sidebar__text">Product</p>
+                <span class="las la-angle-right sidebar__arrow"></span>
+            </a>
+        </li>
+
+        <li class="sidebar__item">
+            <a href="index.html" class="sidebar__link sidebar__link--active">
+                <div class="sidebar__icons">
+                    @@include('../icons/customers.html')
+                </div>
+
+                <p class="text sidebar__text">Customers</p>
+                <span class="las la-angle-right sidebar__arrow"></span>
+            </a>
+        </li>
+
+        <li class="sidebar__item">
+            <a href="index.html" class="sidebar__link">
+                <div class="sidebar__icons">
+                    @@include('../icons/income.html')
+                </div>
+
+                <p class="text sidebar__text">Income</p>
+                <span class="las la-angle-right sidebar__arrow"></span>
+            </a>
+        </li>
+
+        <li class="sidebar__item">
+            <a href="index.html" class="sidebar__link">
+                <div class="sidebar__icons">
+                    @@include('../icons/promote.html')
+                </div>
+
+                <p class="text sidebar__text">Promote</p>
+                <span class="las la-angle-right sidebar__arrow"></span>
+            </a>
+        </li>
+
+        <li class="sidebar__item">
+            <a href="index.html" class="sidebar__link">
+                <div class="sidebar__icons">
+                    @@include('../icons/help.html')
+                </div>
+
+                <p class="text sidebar__text">Help</p>
+                <span class="las la-angle-right sidebar__arrow"></span>
+            </a>
+        </li>
+    </ul>
 </div>

@@ -23,6 +23,15 @@ html {
     }
 }
 
+.main {
+    position: relative;
+    padding-left: var(--sidebar-width);
+
+    @include tabletBig {
+        padding: var(--sidebar-height) 0 0;
+    }
+}
+
 .section {
     position: relative;
     width: 100%;
@@ -31,6 +40,7 @@ html {
 .container {
     max-width: 71.429rem;
     padding: 0 1.143rem;
+    margin: 0 auto;
 }
 
 /*=============================*/
@@ -38,7 +48,8 @@ html {
 /*=============================*/
 .title {
     position: relative;
-    line-height: 1.3em;
+    font-weight: 500;
+    line-height: 1.4em;
     color: var(--color-black);
 
     &--h1 {

@@ -1,5 +1,45 @@
 <section class="section customers">
     <div class="container">
-        <h1 class="title title--h1">Customers Section</h1>
+        <h1 class="title title--h1 customers__title">Hello Evano 👋🏼,</h1>
+
+        <div class="customers__block">
+            <div class="customers__head">
+                <div class="customers__cont">
+                    <h2 class="title title--h2 customers__subtitle">
+                        All Customers
+                    </h2>
+                    <span class="text customers__label">Active Members</span>
+                </div>
+
+                <div class="customers__search">
+                    <span class="customers__icons">
+                        <img
+                            src="img/search.svg"
+                            alt="search"
+                            loading="lazy"
+                            class="customers__icon"
+                        />
+                    </span>
+
+                    <input
+                        name="search"
+                        type="text"
+                        placeholder="Search"
+                        class="text text--size-2 customers__input"
+                    />
+                </div>
+            </div>
+
+            <!-- table -->
+            @@include('../other/table.html')
+
+            <div class="customers__footer">
+                <p class="text customers__data">
+                    Showing data 1 to 8 of 256K entries
+                </p>
+
+                @@include('../other/pagination.html')
+            </div>
+        </div>
     </div>
 </section>

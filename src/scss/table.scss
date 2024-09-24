@@ -1,0 +1,180 @@
+@import 'media';
+
+/*=============================*/
+/* TABLE */
+/*=============================*/
+.table {
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+
+    &__head,
+    &__body {
+        position: relative;
+        width: 100%;
+        border-bottom: 0.071rem solid var(--color-pagination-border);
+
+        @include tablet {
+            border-top: 0.071rem solid var(--color-pagination-border);
+        }
+
+        td {
+            &:nth-child(1) {
+                width: 22%;
+                padding-left: 2.857rem;
+
+                @include tabletBig {
+                    padding-left: 2.286rem;
+                }
+
+                @include tablet {
+                    width: 60%;
+                    padding-left: 0;
+                }
+
+                @include mobileBig {
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(2) {
+                width: 13%;
+
+                @include tablet {
+                    width: 60%;
+                }
+
+                @include mobileBig {
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(3) {
+                width: 17%;
+
+                @include tablet {
+                    width: 60%;
+                }
+
+                @include mobileBig {
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(4) {
+                width: 21%;
+
+                @include tablet {
+                    width: 60%;
+                }
+
+                @include mobileBig {
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(5) {
+                width: 14%;
+
+                @include tablet {
+                    width: 60%;
+                }
+
+                @include mobileBig {
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(6) {
+                width: 13%;
+
+                @include tablet {
+                    width: 60%;
+                }
+
+                @include mobileBig {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    &__head {
+        td {
+            color: var(--color-gray-3);
+            padding-bottom: 1rem;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__body {
+        tr {
+            border-bottom: 0.071rem solid var(--color-pagination-border);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        td {
+            position: relative;
+            color: var(--color-black);
+            padding: 1.286rem 0;
+
+            @include tablet {
+                padding: 1.143rem 0;
+                margin: 0 0 0 auto;
+
+                &::before {
+                    position: absolute;
+                    content: attr(data-mobile-label);
+                    left: -60%;
+                    top: 50%;
+                    display: block;
+                    color: var(--color-gray-3);
+                    transform: translateY(-50%);
+                }
+            }
+
+            @include mobileBig {
+                padding: 1rem 0;
+
+                &::before {
+                    left: calc((100% - 20px) * -1);
+                }
+            }
+        }
+    }
+
+    &__status {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: 5.714rem;
+        padding: 0.286rem 0;
+        color: var(--color-black);
+        border-radius: 0.286rem;
+        border: 0.071rem solid var(--color-black);
+        background-color: var(--color-gray-3);
+
+        &--active {
+            color: var(--color-green);
+            border-color: var(--color-green);
+            background-color: var(--color-green-bg);
+        }
+
+        &--inactive {
+            color: var(--color-red);
+            border-color: var(--color-red);
+            background-color: var(--color-red-bg);
+        }
+    }
+}

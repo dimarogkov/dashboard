@@ -1,0 +1,50 @@
+/*=============================*/
+/* PAGINATION */
+/*=============================*/
+.pagination {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0.857rem;
+}
+.pagination__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.714rem;
+  height: 1.714rem;
+  font-size: 0.857rem;
+  font-weight: 500;
+  color: var(--color-black);
+  border-radius: 0.286rem;
+  border: 0.143rem solid var(--color-pagination-border);
+  background-color: var(--color-pagination-bg);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pagination__item:hover {
+  background-color: var(--color-pagination-border);
+}
+.pagination__item--active {
+  color: var(--color-white);
+  border-color: var(--color-blue);
+  background-color: var(--color-blue);
+  pointer-events: none;
+}
+.pagination__item--dots {
+  border-color: transparent;
+  background-color: transparent;
+  pointer-events: none;
+}

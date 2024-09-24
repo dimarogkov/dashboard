@@ -1,0 +1,182 @@
+/*=============================*/
+/* MEDIA */
+/*=============================*/ /*=============================*/
+/* TABLE */
+/*=============================*/
+.table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table__head, .table__body {
+  position: relative;
+  width: 100%;
+  border-bottom: 0.071rem solid var(--color-pagination-border);
+}
+@media (max-width: 991px) {
+  .table__head, .table__body {
+    border-top: 0.071rem solid var(--color-pagination-border);
+  }
+}
+.table__head td:nth-child(1), .table__body td:nth-child(1) {
+  width: 22%;
+  padding-left: 2.857rem;
+}
+@media (max-width: 1199px) {
+  .table__head td:nth-child(1), .table__body td:nth-child(1) {
+    padding-left: 2.286rem;
+  }
+}
+@media (max-width: 991px) {
+  .table__head td:nth-child(1), .table__body td:nth-child(1) {
+    width: 60%;
+    padding-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  .table__head td:nth-child(1), .table__body td:nth-child(1) {
+    width: 50%;
+  }
+}
+.table__head td:nth-child(2), .table__body td:nth-child(2) {
+  width: 13%;
+}
+@media (max-width: 991px) {
+  .table__head td:nth-child(2), .table__body td:nth-child(2) {
+    width: 60%;
+  }
+}
+@media (max-width: 575px) {
+  .table__head td:nth-child(2), .table__body td:nth-child(2) {
+    width: 50%;
+  }
+}
+.table__head td:nth-child(3), .table__body td:nth-child(3) {
+  width: 17%;
+}
+@media (max-width: 991px) {
+  .table__head td:nth-child(3), .table__body td:nth-child(3) {
+    width: 60%;
+  }
+}
+@media (max-width: 575px) {
+  .table__head td:nth-child(3), .table__body td:nth-child(3) {
+    width: 50%;
+  }
+}
+.table__head td:nth-child(4), .table__body td:nth-child(4) {
+  width: 21%;
+}
+@media (max-width: 991px) {
+  .table__head td:nth-child(4), .table__body td:nth-child(4) {
+    width: 60%;
+  }
+}
+@media (max-width: 575px) {
+  .table__head td:nth-child(4), .table__body td:nth-child(4) {
+    width: 50%;
+  }
+}
+.table__head td:nth-child(5), .table__body td:nth-child(5) {
+  width: 14%;
+}
+@media (max-width: 991px) {
+  .table__head td:nth-child(5), .table__body td:nth-child(5) {
+    width: 60%;
+  }
+}
+@media (max-width: 575px) {
+  .table__head td:nth-child(5), .table__body td:nth-child(5) {
+    width: 50%;
+  }
+}
+.table__head td:nth-child(6), .table__body td:nth-child(6) {
+  width: 13%;
+}
+@media (max-width: 991px) {
+  .table__head td:nth-child(6), .table__body td:nth-child(6) {
+    width: 60%;
+  }
+}
+@media (max-width: 575px) {
+  .table__head td:nth-child(6), .table__body td:nth-child(6) {
+    width: 50%;
+  }
+}
+.table__head td {
+  color: var(--color-gray-3);
+  padding-bottom: 1rem;
+}
+@media (max-width: 991px) {
+  .table__head {
+    display: none;
+  }
+}
+.table__body tr {
+  border-bottom: 0.071rem solid var(--color-pagination-border);
+}
+.table__body tr:last-child {
+  border-bottom: none;
+}
+@media (max-width: 991px) {
+  .table__body tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.table__body td {
+  position: relative;
+  color: var(--color-black);
+  padding: 1.286rem 0;
+}
+@media (max-width: 991px) {
+  .table__body td {
+    padding: 1.143rem 0;
+    margin: 0 0 0 auto;
+  }
+  .table__body td::before {
+    position: absolute;
+    content: attr(data-mobile-label);
+    left: -60%;
+    top: 50%;
+    display: block;
+    color: var(--color-gray-3);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+@media (max-width: 575px) {
+  .table__body td {
+    padding: 1rem 0;
+  }
+  .table__body td::before {
+    left: calc((100% - 20px) * -1);
+  }
+}
+.table__status {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 5.714rem;
+  padding: 0.286rem 0;
+  color: var(--color-black);
+  border-radius: 0.286rem;
+  border: 0.071rem solid var(--color-black);
+  background-color: var(--color-gray-3);
+}
+.table__status--active {
+  color: var(--color-green);
+  border-color: var(--color-green);
+  background-color: var(--color-green-bg);
+}
+.table__status--inactive {
+  color: var(--color-red);
+  border-color: var(--color-red);
+  background-color: var(--color-red-bg);
+}

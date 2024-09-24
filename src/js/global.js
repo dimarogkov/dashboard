@@ -1,13 +1,23 @@
 // JS MENU
 // ==============
 // STORE
+// ANIMATION AFTER LOADER
 // SIDEBAR
 // INIT PAGE
 // ==============
 
 // STORE
 import {store} from './store.js';
-const {elements, state} = store;
+const {elements} = store;
+
+// ANIMATION AFTER LOADER
+const initAnimation = () => {
+    const loader = elements.loader;
+
+    const init = () => document.body.classList.add('body--ready');
+
+    loader.addEventListener('animationend', init);
+};
 
 // SIDEBAR
 const initSidebar = () => {
@@ -30,6 +40,7 @@ const initSidebar = () => {
 };
 
 const initPage = () => {
+    initAnimation();
     initSidebar();
 };
 

@@ -18,8 +18,58 @@ html {
 }
 
 .body {
+    .sidebar {
+        opacity: 0;
+        will-change: transform;
+        transform: translateX(-50%);
+        transition: all 0.7s;
+
+        @include tabletBig {
+            transform: translateY(-100%);
+        }
+    }
+
+    .customers {
+        &__title {
+            opacity: 0;
+            will-change: transform;
+            transform: translateX(-3.571rem);
+            transition: all 0.7s;
+        }
+
+        &__block {
+            opacity: 0;
+            will-change: transform;
+            transform: translateY(7.143rem);
+            transition: all 0.7s;
+        }
+    }
+
     &--lock {
         overflow: hidden;
+    }
+
+    &--ready {
+        .sidebar {
+            opacity: 1;
+            transform: translateX(0);
+
+            @include tabletBig {
+                transform: translateY(0);
+            }
+        }
+
+        .customers {
+            &__title {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            &__block {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 }
 
